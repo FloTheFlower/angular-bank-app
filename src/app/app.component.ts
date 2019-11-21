@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   bankName = 'Bank of San Diego';
-  account: any = {
+
+
+  /*account: any = {
     fname: 'first name',
     lname: 'last name',
     age: 0,
@@ -40,5 +42,5 @@ export class AppComponent {
         currency: 'usd'
       }
     ]
-  };
+  };*/
 }
