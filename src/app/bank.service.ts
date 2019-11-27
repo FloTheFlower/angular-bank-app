@@ -38,7 +38,9 @@ export class BankService {
         currency: 'usd'
       }
     ]
+
   };
+
 
 
   constructor() { }

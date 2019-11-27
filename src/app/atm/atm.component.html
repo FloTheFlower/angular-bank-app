@@ -1,8 +1,15 @@
 <h1>ATM View</h1>
 <div class="main">
-  <section class="display">
-    > Welcome, Henry!
-    {{_bank.account.balance}}
+  <section class="display" id="display">
+    Welcome, Henry!
+    <p *ngIf=showSucess> Transaction sucessful, your new balance is {{_bank.account.balance}}. <br>
+      Your currency is: {{_bank.account.currency}} </p>
+      <div *ngIf=showHistory> 
+
+    <p *ngFor="let transaction of _bank.account.transactions"> 
+      Your transaction history is: {{transaction.amount}} Dollars. Made on: {{transaction.date}} </p>
+
+  </div>
   </section>
   <aside class="options">
     <!-- Add functionality to the buttons below -->
@@ -13,7 +20,6 @@
     
       </li>
       <li class="options-item">
-          <input type='number' [(ngModel)]="value">
         <button (click)="deposit()">Deposit Money</button>
         
       </li>
@@ -21,7 +27,7 @@
         <button>Balance Inquiry</button>
       </li>
       <li class="options-item">
-        <button>Transactions History</button>
+        <button (click)="history()">Transactions History</button>
       </li>
     </ul>
   </aside>

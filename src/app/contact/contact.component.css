@@ -1,0 +1,38 @@
+
+.bigBox {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.leftSide {
+
+    display: flex;
+    margin-right: auto; 
+    flex-direction: column;
+    background-color: blue;
+}
+
+.rightSide {
+
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    background-color: pink;
+
+}
+
+.button {
+
+    color: yellow;
+    background-color: blue;
+}
+
+.html {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    align-self: center;
+    
+}

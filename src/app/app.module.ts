@@ -23,7 +23,8 @@ import { BankService } from './bank.service';
   imports: [
     BrowserModule,
     router,
-    FormsModule
+    FormsModule,
+   
   ],
   providers: [BankService],
   bootstrap: [AppComponent]

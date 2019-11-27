@@ -1,3 +1,33 @@
-<p>
-  contact works!
-</p>
+<div class="bigBox">
+  
+<div class="leftSide">
+      <h1> Visit Us </h1> <br>
+        <p> We are the super awesome bank!</p> <br>
+        <p> If you are cool, you don't have to pay interest</p> <br>
+      <address> 1424 FreeBeer Street in Life-Is-Easy Town </address>
+</div>
+
+<form class="rightSide">
+  <h1> Personal Data </h1>
+    <span>Your First, Middle and Lastname: </span>
+    <input type="text" name = "name" [(ngModel)]= "name" 
+    required pattern="\S+"/> <br>
+
+    <span> Your Phone-Number: </span>
+    <input type="tel" name = "number" [(ngModel)]="number" 
+    required pattern="\S+"/> <br>
+    
+    <span> Your Email-Adresse: </span>
+    <input type="email" name="email" [(ngModel)]="email" 
+    required pattern="\S+"/> <br>
+
+    <span> Your Feedback: </span>
+    <input type="textarea" name="feedback" [(ngModel)] = "feedback" class="html">
+
+      <p><i>Thank you! This way we can sell your data better! </i></p>
+
+<button (click) = clickAlert() class="button"> Submit </button>
+
+</form>
+
+</div>

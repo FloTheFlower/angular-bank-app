@@ -15,6 +15,8 @@
     <p>[01-01-2018] -  Deposit ($20 USD)</p>
     <p>[01-01-2018] -  Withdrawal ($40 USD)</p>
     <p>[01-01-2018] -  Deposit ($20 USD)</p>
+    <p *ngFor = "let transaction of _bankservice.account.transactions"> 
+      Your account history is {{transaction.amount}} made on {{transaction.date}} </p>
   </section>
   <aside class="options">
     <section class="balance">
@@ -24,13 +26,14 @@
     <!-- Add functionality to the buttons below -->
     <ul class="options-list">
       <li class="options-item">
-        <button>Widthdrawl for Customer</button>
+        <input type="number" [(ngModel)] = "value">
+        <button (click) = "withdraw()"> Widthdrawl for Customer</button>
       </li>
       <li class="options-item">
-        <button>Deposit for Customer</button>
+        <button (click)="deposit()">Deposit for Customer</button>
       </li>
       <li class="options-item">
-        <button>Customer Transaction History</button>
+        <button (click) = "history()">Customer Transaction History</button>
       </li>
     </ul>
   </aside>

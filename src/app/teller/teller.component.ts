@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BankService } from '../bank.service';
 
 @Component({
@@ -8,6 +8,21 @@ import { BankService } from '../bank.service';
 })
 export class TellerComponent {
 
-  constructor() { }
+value;
+  constructor(public _bankservice: BankService) { }
+
+  withdraw() {
+    this._bankservice.account.balance -= this.value;
+    this._bankservice.account.transactions.push({amount:this.value}), {balance:this.value};
+  }
+
+  deposit(){
+    this._bankservice.account.balance += this.value;
+    this._bankservice.account.transactions.push({balance:this.value}, {amount: this.value})
+  }
+
+  history() {
+    
+  }
 
 }
